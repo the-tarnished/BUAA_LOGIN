@@ -1,7 +1,8 @@
 ﻿# Readme
 ## 文件介绍
-`connect_with_page`文件在运行的时候会弹出浏览器窗口
+`connect_with_page`文件在运行的时候会弹出浏览器窗口</br>
 `connect_without_page`文件在运行的时候不会弹出浏览器窗口
+
 请自行选择合适的文件
 ## 前置条件
 ### python运行环境
