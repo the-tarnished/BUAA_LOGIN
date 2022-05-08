@@ -5,13 +5,10 @@ typeOfDriver = "Firefox" ##Firefox Edge Chrome
 url = "https://gw.buaa.edu.cn/srun_portal_pc?ac_id=1&theme=buaa"
 ### END CONFIG
 
-
-
 ### import
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ChromeOptions
-from selenium.webdriver import EdgeOptions
 from selenium.webdriver import FirefoxOptions
 import logging
 import time
@@ -28,10 +25,6 @@ def initBrowser() :
         option.add_argument('--headless')
         browser = webdriver.Chrome(options = option)
         browser.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument',{'source':'Object.defineProperty(navigator,"webdriver",{get:() => undefined})'})
-    elif typeOfDriver == "Edge":
-        option = EdgeOptions();
-        option.add_argument('--headless')
-        browser = webdriver.Edge(options=option)
     elif typeOfDriver == "Firefox":
         option = FirefoxOptions();
         option.add_argument('--headless')
